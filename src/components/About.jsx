@@ -14,7 +14,7 @@ const AboutSection = () => {
       id="about"
       className="bg-white scroll-m-10 dark:bg-black text-black dark:text-gray-100 py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 transition-colors duration-500"
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center mt-10">
+      <div className="max-w-7xl p-3 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center mt-10">
         {/* LEFT IMAGES */}
         <div
           className="relative flex justify-center lg:justify-end order-2 lg:order-1"
@@ -38,7 +38,7 @@ const AboutSection = () => {
             src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=400&h=500&fit=crop"
             alt="Mechanic"
             className="relative z-10 rounded-sm shadow-lg w-[260px] sm:w-[280px] md:w-[320px] 
-                       h-[340px] sm:h-[380px] md:h-[420px] object-cover mt-10 sm:mt-12 md:mt-16"
+                       h-[340px] sm:h-[380px] md:h-[420px] object-cover mt-10 ml-10 sm:mt-12 md:mt-16"
           />
         </div>
 

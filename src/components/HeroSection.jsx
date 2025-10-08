@@ -28,10 +28,10 @@ const HeroSection = () => {
                         <div className="flex items-center gap-5 pt-4">
                             <a href="/#contact">
                                 <button className="border-2 border-[#4ab8e9] text-white px-6 py-3 rounded-full flex items-center gap-2 group hover:bg-[#4ab8e9] transition font-semibold">
-                                    <span className="transition-transform duration-300 group-hover:-translate-x-1">
+                                    <span className="transition-transform duration-300 text-sm lg:text-base group-hover:-translate-x-1 group-active:-translate-x-1">
                                         Book Your Mobile Service Today
                                     </span>
-                                    <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+                                    <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1 group-active:translate-x-1 mt-1" />
                                 </button>
                             </a>
 
@@ -56,20 +56,20 @@ const HeroSection = () => {
             <section className="bg-white text-black shadow-lg py-10 -mt-12 justify-center w-[80%] px-6 md:px-12 lg:px-20 rounded-2xl max-w-5xl mx-auto translate-x-0 z-10">
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl items-center">
                     <div className="text-center" data-aos="fade-up">
-                        <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold">600+</h3>
-                        <p className="text-gray-800">Team Member</p>
+                        <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold">3+</h3>
+                        <p className="text-gray-800">Cities covered</p>
                     </div>
                     <div className="text-center" data-aos="fade-up" data-aos-delay="100">
-                        <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold">2k+</h3>
-                        <p className="text-gray-800">Service Complete</p>
+                        <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold">1000+</h3>
+                        <p className="text-gray-800">Cars helped</p>
                     </div>
                     <div className="text-center" data-aos="fade-up" data-aos-delay="200">
-                        <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold">53+</h3>
-                        <p className="text-gray-800">Winning Award</p>
+                        <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold">40+</h3>
+                        <p className="text-gray-800">Mile radius</p>
                     </div>
                     <div className="text-center" data-aos="fade-up" data-aos-delay="300">
-                        <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold">3k+</h3>
-                        <p className="text-gray-800">Client Review</p>
+                        <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold">5+</h3>
+                        <p className="text-gray-800">Counties covered</p>
                     </div>
                 </div>
             </section>
