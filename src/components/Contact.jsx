@@ -129,7 +129,7 @@ export default function Contact() {
     <section
       id="contact"
       data-aos="fade-up"
-      className="py-10 bg-white dark:bg-black transition-colors duration-300"
+      className="py-10 bg-white dark:bg-black transition-colors duration-300 scroll-m-20"
     >
       <div className="container mx-auto px-4 md:px-12 -mt-8">
         {/* Heading */}

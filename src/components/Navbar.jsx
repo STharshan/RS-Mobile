@@ -4,7 +4,7 @@ import {
   FiMenu,
   FiX,
 } from "react-icons/fi";
-import ThemeToggle from "./ThemeToggle"; // Your theme toggle component
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,7 +17,10 @@ const Navbar = () => {
   ];
 
   const socialLinks = [
-    { icon: <FiFacebook />, href: "https://www.facebook.com/people/RS-Mobile-Services/100092690151352/" },
+    {
+      icon: <FiFacebook />,
+      href: "https://www.facebook.com/people/RS-Mobile-Services/100092690151352/",
+    },
   ];
 
   return (
@@ -26,7 +29,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center gap-3">
           <img
-            src="/logo.png" // Replace with your logo
+            src="/logo.png"
             alt="Crank Logo"
             className="w-36 h-12 object-contain"
           />
@@ -58,20 +61,38 @@ const Navbar = () => {
               {item.icon}
             </a>
           ))}
-        </div>
-
-        {/* Theme Toggle */}
-        <div className="">
+          {/* Theme toggle */}
           <ThemeToggle />
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="lg:hidden bg-[#ef5a24] p-2 rounded-full text-xl"
-        >
-          {menuOpen ? <FiX /> : <FiMenu />}
-        </button>
+        {/* Mobile Right Side */}
+        <div className="flex items-center gap-2 lg:hidden">
+          {/* Facebook Icon */}
+          {socialLinks.map((item, index) => (
+            <a
+              key={index}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#2c2c2c] p-2 rounded-full hover:bg-[#ef5a24] transition-colors"
+            >
+              {item.icon}
+            </a>
+          ))}
+
+          {/* Theme Toggle */}
+          <div className="flex items-center ">
+            <ThemeToggle />
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="bg-[#ef5a24] p-2 rounded-full text-xl"
+          >
+            {menuOpen ? <FiX /> : <FiMenu />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -87,20 +108,6 @@ const Navbar = () => {
               {item.name}
             </a>
           ))}
-
-          <div className="flex gap-3 pt-4">
-            {socialLinks.map((item, index) => (
-              <a
-                key={index}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#2c2c2c] p-2 rounded-full hover:bg-[#ef5a24] transition-colors"
-              >
-                {item.icon}
-              </a>
-            ))}
-          </div>
         </div>
       )}
     </nav>
