@@ -60,7 +60,7 @@ Definitely recommend them`,
     image: "https://i.pravatar.cc/150?img=4",
     text: "Sam was so good from the start. Quick to reply when I was enquiring and reliable to the end. Even collected and dropped off my car for me . Highly recommend and will definitely use him again . Honest from the start , as to what work actually needed doing . Some repairs and a full service , value for money and so reliable . Thank you so much Sam !!",
   },
-    {
+  {
     name: "Barrie Worley",
     role: "Partner",
     image: "https://i.pravatar.cc/150?img=4",
@@ -106,16 +106,16 @@ export default function Testimonials() {
         {/* Scroll Buttons */}
         <button
           onClick={() => scroll("left")}
-          className="absolute left-4 top-1/2 mt-25 -translate-y-1/2 bg-[#4ab8e9] p-3 rounded-full shadow-md hover:bg-[#ef5a24] hover:text-white transition z-20"
+          className="absolute left-4 top-1/2 -translate-y-1/2 bg-[#4ab8e9] p-3 rounded-full shadow-md hover:bg-[#ef5a24] hover:text-white transition z-20 group"
         >
-          <FaChevronLeft size={18} />
+          <FaChevronLeft className="transition-transform duration-300 group-hover:-translate-x-1" size={18} />
         </button>
 
         <button
           onClick={() => scroll("right")}
-          className="absolute right-4 top-1/2 mt-25 -translate-y-1/2 bg-[#4ab8e9] p-3 rounded-full shadow-md hover:bg-[#ef5a24] hover:text-white transition z-20"
+          className="absolute right-4 top-1/2 -translate-y-1/2 bg-[#4ab8e9] p-3 rounded-full shadow-md hover:bg-[#ef5a24] hover:text-white transition z-20 group"
         >
-          <FaChevronRight size={18} />
+          <FaChevronRight className="transition-transform duration-300 group-hover:translate-x-1" size={18} />
         </button>
 
         {/* Scroll Container */}
