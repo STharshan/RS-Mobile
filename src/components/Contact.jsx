@@ -136,7 +136,7 @@ export default function Contact() {
         <div className="text-center mb-16" data-aos="fade-up" data-aos-delay="100">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-black dark:text-white">GET IN </span>
-            <span className="bg-gradient-to-r from-[#4ab8e9] via-black to-[#ef5a24] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#4ab8e9] to-[#ef5a24] bg-clip-text text-transparent">
               TOUCH
             </span>
           </h2>

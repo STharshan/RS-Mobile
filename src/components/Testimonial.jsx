@@ -106,14 +106,14 @@ export default function Testimonials() {
         {/* Scroll Buttons */}
         <button
           onClick={() => scroll("left")}
-          className="absolute left-4 top-1/2 mt-25 -translate-y-1/2 bg-gray-100 dark:bg-gray-800 p-3 rounded-full shadow-md hover:bg-[#ef5a24] hover:text-white transition z-20"
+          className="absolute left-4 top-1/2 mt-25 -translate-y-1/2 bg-[#4ab8e9] p-3 rounded-full shadow-md hover:bg-[#ef5a24] hover:text-white transition z-20"
         >
           <FaChevronLeft size={18} />
         </button>
 
         <button
           onClick={() => scroll("right")}
-          className="absolute right-4 top-1/2 mt-25 -translate-y-1/2 bg-gray-100 dark:bg-gray-800 p-3 rounded-full shadow-md hover:bg-[#ef5a24] hover:text-white transition z-20"
+          className="absolute right-4 top-1/2 mt-25 -translate-y-1/2 bg-[#4ab8e9] p-3 rounded-full shadow-md hover:bg-[#ef5a24] hover:text-white transition z-20"
         >
           <FaChevronRight size={18} />
         </button>
