@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FiFacebook, FiTwitter, FiInstagram, FiMenu, FiX, FiChevronDown } from "react-icons/fi";
 import { FaPinterest } from "react-icons/fa";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -35,6 +36,13 @@ const Navbar = () => {
                         </button>
                     ))}
                 </div>
+
+                   <div className="md:hidden">
+                            <ThemeToggle />
+                          </div>
+                          <div className="hidden md:block">
+                            <ThemeToggle />
+                          </div>
 
                 {/* Social Icons */}
                 <div className="hidden lg:flex items-center gap-3">

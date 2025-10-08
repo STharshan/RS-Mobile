@@ -1,16 +1,19 @@
 import React from "react";
-import { FaCircleCheck } from "react-icons/fa6";
+import { FaToolbox } from "react-icons/fa6";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 const AboutSection = () => {
   return (
     <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
+        
         {/* LEFT IMAGES */}
         <div className="relative flex justify-center lg:justify-end order-2 lg:order-1">
           {/* Background image (moved higher) */}
           <div
-            className="absolute -top-6 sm:-top-8 md:-top-10 left-4 sm:left-6 w-64 sm:w-72 md:w-80 
-                       h-[350px] sm:h-[390px] md:h-[430px] z-0 rounded-sm overflow-hidden"
+            className="absolute -top-6 sm:-top-8 md:-top-10 left-4 sm:left-6 
+                       w-64 sm:w-72 md:w-80 h-[350px] sm:h-[390px] md:h-[430px] 
+                       z-0 rounded-sm overflow-hidden"
           >
             <img
               src="image.png"
@@ -32,8 +35,8 @@ const AboutSection = () => {
         <div className="order-1 lg:order-2">
           {/* Subtitle */}
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-red-600 text-lg sm:text-xl">🧰</span>
-            <p className="text-red-600 font-semibold uppercase tracking-wide text-xs sm:text-sm">
+            <FaToolbox className="text-[#ef5a24] text-lg sm:text-xl" />
+            <p className="text-[#ef5a24] font-semibold uppercase tracking-wide text-xs sm:text-sm">
               Who We Are
             </p>
           </div>
@@ -48,7 +51,9 @@ const AboutSection = () => {
             <span className="block font-semibold text-gray-900 mb-2">
               Delivering Expert Mobile Vehicle Maintenance
             </span>
-            RS Mobile Services was founded by <strong>Sam Ferries</strong> to bring professional car repair and servicing directly to customers through a fully equipped mobile setup. The business is now solely owned and operated by Sam, built on trust, skill, and convenience.
+            RS Mobile Services was founded by <strong>Sam Ferries</strong> to bring professional car repair 
+            and servicing directly to customers through a fully equipped mobile setup. 
+            The business is now solely owned and operated by Sam, built on trust, skill, and convenience.
           </p>
 
           {/* Profile + Bullet Points */}
@@ -69,15 +74,15 @@ const AboutSection = () => {
             {/* Bullet List */}
             <ul className="space-y-3 sm:space-y-4 text-gray-700">
               <li className="flex items-start gap-2 sm:gap-3">
-                <FaCircleCheck className="text-red-600 flex-shrink-0 mt-1 text-sm sm:text-base" />
+                <IoMdCheckmarkCircleOutline className="text-[#ef5a24] flex-shrink-0 mt-1 text-lg" />
                 <span className="text-sm sm:text-base">Our experience is proven</span>
               </li>
               <li className="flex items-start gap-2 sm:gap-3">
-                <FaCircleCheck className="text-red-600 flex-shrink-0 mt-1 text-sm sm:text-base" />
+                <IoMdCheckmarkCircleOutline className="text-[#ef5a24] flex-shrink-0 mt-1 text-lg" />
                 <span className="text-sm sm:text-base">Qualified, reliable, and service-driven</span>
               </li>
               <li className="flex items-start gap-2 sm:gap-3">
-                <FaCircleCheck className="text-red-600 flex-shrink-0 mt-1 text-sm sm:text-base" />
+                <IoMdCheckmarkCircleOutline className="text-[#ef5a24] flex-shrink-0 mt-1 text-lg" />
                 <span className="text-sm sm:text-base">
                   Decades of expertise across top automotive brands
                 </span>
