@@ -195,7 +195,7 @@ export default function CarServicesSection() {
       <section
         id='services'
         data-aos="fade-up"
-        className="relative py-12 md:py-20 px-4 md:px-8 overflow-hidden bg-white dark:bg-black transition-colors duration-500"
+        className="relative py-12 md:py-20 px-4 md:px-8 overflow-hidden bg-white dark:bg-black transition-colors duration-500 scroll-m-10"
       >
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10 pointer-events-none">

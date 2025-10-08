@@ -4,16 +4,17 @@ import {
   FiMenu,
   FiX,
 } from "react-icons/fi";
+import { HashLink } from "react-router-hash-link";
 import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", href: "#hero" },
-    { name: "About Us", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/#hero" },
+    { name: "About Us", href: "/#about" },
+    { name: "Services", href: "/#services" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   const socialLinks = [
@@ -30,7 +31,7 @@ const Navbar = () => {
         <div className="flex items-center gap-3">
           <img
             src="/logo.png"
-            alt="Crank Logo"
+            alt="RS Mobile Services Logo"
             className="w-36 h-12 object-contain"
           />
         </div>
@@ -38,13 +39,14 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <div className="hidden lg:flex items-center gap-8">
           {navLinks.map((item) => (
-            <a
+            <HashLink
               key={item.name}
-              href={item.href}
+              smooth
+              to={item.href}
               className="flex items-center gap-1 font-semibold text-white hover:text-[#ef5a24] transition-colors"
             >
               {item.name}
-            </a>
+            </HashLink>
           ))}
         </div>
 
@@ -61,13 +63,11 @@ const Navbar = () => {
               {item.icon}
             </a>
           ))}
-          {/* Theme toggle */}
           <ThemeToggle />
         </div>
 
         {/* Mobile Right Side */}
         <div className="flex items-center gap-2 lg:hidden">
-          {/* Facebook Icon */}
           {socialLinks.map((item, index) => (
             <a
               key={index}
@@ -80,8 +80,7 @@ const Navbar = () => {
             </a>
           ))}
 
-          {/* Theme Toggle */}
-          <div className="flex items-center ">
+          <div className="flex items-center">
             <ThemeToggle />
           </div>
 
@@ -99,14 +98,15 @@ const Navbar = () => {
       {menuOpen && (
         <div className="lg:hidden mt-4 bg-[#222] rounded-lg p-4 space-y-3">
           {navLinks.map((item) => (
-            <a
+            <HashLink
               key={item.name}
-              href={item.href}
+              smooth
+              to={item.href}
               onClick={() => setMenuOpen(false)}
               className="block py-2 text-gray-200 hover:text-[#ef5a24] border-b border-gray-700 last:border-0 transition-colors"
             >
               {item.name}
-            </a>
+            </HashLink>
           ))}
         </div>
       )}

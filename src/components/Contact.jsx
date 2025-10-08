@@ -20,7 +20,7 @@ function InputField({
   const lightClasses =
     "bg-white border-gray-300 text-gray-900 placeholder-gray-400 focus:ring-[#4ab8e9]";
   const darkClasses =
-    "bg-slate-800 border-slate-700 text-white placeholder-slate-400 focus:ring-[#4ab8e9]";
+    "bg-slate-800 border-slate-700 text-black placeholder-slate-400 focus:ring-[#4ab8e9]";
   const errorClasses = error ? "border-red-500 focus:ring-red-500" : "";
 
   return (
@@ -104,9 +104,12 @@ export default function Contact() {
     if (errors.phone || errors.email) return;
 
     const waMessage = `Hello, I need assistance. Here are the details:\n\nName: ${formData.fullName}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nCar Registration: ${formData.carReg}\nMake & Model: ${formData.makeModel}\nLocation: ${formData.location}\nMessage: ${formData.message}`;
-    const waHref = `https://wa.me/447494481443?text=${encodeURIComponent(
+
+    // ✅ Updated WhatsApp number here
+    const waHref = `https://wa.me/447506126071?text=${encodeURIComponent(
       waMessage
     )}`;
+
     window.open(waHref, "_blank");
 
     setFormData({
@@ -119,6 +122,7 @@ export default function Contact() {
       message: "",
     });
   };
+
 
   const phoneDisplay = "+44 1780 917600";
   const phoneHref = "tel:+44 1780 917600";
@@ -168,7 +172,7 @@ export default function Contact() {
                     <h4 className="text-xl font-bold text-[#ef5a24]">
                       Address
                     </h4>
-                    <p className="text-[#ef5a24] dark:text-gray-300 hover:text-[#4ab8e9] whitespace-pre-line">
+                    <p className="text-[#ef5a24] hover:text-[#4ab8e9] whitespace-pre-line">
                       {address}
                     </p>
                   </div>
@@ -212,7 +216,7 @@ export default function Contact() {
           </div>
 
           {/* RIGHT: Form */}
-          <div data-aos="fade-left" data-aos-delay="300">
+          <div>
             <div className="bg-white dark:bg-gray-800 border hover:shadow-[#4ab8e9] active:shadow-[#4ab8e9] dark:hover:shadow-[#ef5a24] dark:active:shadow-[#ef5a24] border-slate-200 dark:border-slate-700 rounded-xl transition-colors duration-300 shadow-xl z-10">
               <div className="p-6 space-y-6">
                 <form onSubmit={handleSubmit} className="space-y-6">

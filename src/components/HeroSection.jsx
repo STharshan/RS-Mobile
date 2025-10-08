@@ -16,22 +16,20 @@ const HeroSection = () => {
 
                     {/* Left Content */}
                     <div className="space-y-6" data-aos="fade-right">
-                        <h1 className="text-3xl md:text-4xl lg:text-5xl mt-30 sm:mt-10 font-extrabold leading-tight">
-                            Where Quality Is <br />
-                            <span className="text-[#4ab8e9]">A Service Meets The Open Road</span>
+                        <h1 className="text-2xl md:text-3xl lg:text-4xl mt-30 sm:mt-10 font-extrabold leading-tight">
+                            Where Quality Meets the Open Road<br />
+                            <span className="text-[#4ab8e9]">Expert Mobile Mechanics </span>
                         </h1>
 
                         <p className="text-gray-300 max-w-md">
-                            Car service is essential for maintaining the performance and
-                            longevity of your vehicle. From oil changes to engine diagnostics —
-                            we’ve got you covered.
+                            Wherever You Are RS Mobile Repair brings the garage to you. From oil changes to engine diagnostics, our fully equipped vans ensure your vehicle runs smoothly without the hassle of visiting a workshop.
                         </p>
 
                         <div className="flex items-center gap-5 pt-4">
                             <a href="/#contact">
                                 <button className="border-2 border-[#4ab8e9] text-white px-6 py-3 rounded-full flex items-center gap-2 group hover:bg-[#4ab8e9] transition font-semibold">
                                     <span className="transition-transform duration-300 group-hover:-translate-x-1">
-                                        Get Started
+                                        Book Your Mobile Service Today
                                     </span>
                                     <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
                                 </button>
