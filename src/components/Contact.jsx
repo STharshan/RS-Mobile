@@ -1,13 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-// Reusable InputField component
-function InputField({ label, type = "text", name, placeholder, value, onChange, error, required = false, textarea = false, rows = 3 }) {
-  const baseClasses = "w-full bg-slate-800 border text-white placeholder-slate-400 rounded-md px-4 py-3 focus:outline-none focus:ring-2";
-  const errorClasses = error ? "border-red-500 focus:ring-red-500" : "border-slate-700 focus:ring-[#4ab8e9]";
+function InputField({
+  label,
+  type = "text",
+  name,
+  placeholder,
+  value,
+  onChange,
+  error,
+  required = false,
+  textarea = false,
+  rows = 3,
+}) {
+  const baseClasses =
+    "w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-2 transition-colors duration-200";
+  const lightClasses =
+    "bg-white border-gray-300 text-gray-900 placeholder-gray-400 focus:ring-[#4ab8e9]";
+  const darkClasses =
+    "bg-slate-800 border-slate-700 text-white placeholder-slate-400 focus:ring-[#4ab8e9]";
+  const errorClasses = error ? "border-red-500 focus:ring-red-500" : "";
 
   return (
-    <div>
+    <div data-aos="fade-up">
       {textarea ? (
         <textarea
           id={name}
@@ -16,7 +33,7 @@ function InputField({ label, type = "text", name, placeholder, value, onChange, 
           value={value}
           onChange={onChange}
           rows={rows}
-          className={`${baseClasses} ${errorClasses}`}
+          className={`${baseClasses} ${errorClasses} ${lightClasses} dark:${darkClasses}`}
           required={required}
         />
       ) : (
@@ -27,7 +44,7 @@ function InputField({ label, type = "text", name, placeholder, value, onChange, 
           placeholder={placeholder}
           value={value}
           onChange={onChange}
-          className={`${baseClasses} ${errorClasses}`}
+          className={`${baseClasses} ${errorClasses} ${lightClasses} dark:${darkClasses}`}
           required={required}
         />
       )}
@@ -51,6 +68,15 @@ export default function Contact() {
 
   const phoneRegex = /^(?:\+44|0)[1-9]\d{8,9}$/;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-in-out",
+      once: true,
+      offset: 100,
+    });
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -78,7 +104,9 @@ export default function Contact() {
     if (errors.phone || errors.email) return;
 
     const waMessage = `Hello, I need assistance. Here are the details:\n\nName: ${formData.fullName}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nCar Registration: ${formData.carReg}\nMake & Model: ${formData.makeModel}\nLocation: ${formData.location}\nMessage: ${formData.message}`;
-    const waHref = `https://wa.me/447494481443?text=${encodeURIComponent(waMessage)}`;
+    const waHref = `https://wa.me/447494481443?text=${encodeURIComponent(
+      waMessage
+    )}`;
     window.open(waHref, "_blank");
 
     setFormData({
@@ -95,20 +123,24 @@ export default function Contact() {
   const phoneDisplay = "+44 1780 917600";
   const phoneHref = "tel:+44 1780 917600";
   const emailDisplay = "sam.ferries@rsmobileservices.co.uk";
-  const address = ` 10 Campion Grove, Stamford PE9 4BY, United Kingdom`;
+  const address = `10 Campion Grove, Stamford PE9 4BY, United Kingdom`;
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section
+      id="contact"
+      data-aos="fade-up"
+      className="py-20 bg-white dark:bg-black transition-colors duration-300"
+    >
       <div className="container mx-auto px-4 md:px-12">
         {/* Heading */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up" data-aos-delay="100">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-black">GET IN </span>
-            <span className="bg-gradient-to-r from-[[#4ab8e9]] via-black to-[#ef5a24] bg-clip-text text-transparent">
+            <span className="text-black dark:text-white">GET IN </span>
+            <span className="bg-gradient-to-r from-[#4ab8e9] via-black to-[#ef5a24] bg-clip-text text-transparent">
               TOUCH
             </span>
           </h2>
-          <p className="text-xl text-gray-800 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-800 dark:text-gray-300 max-w-2xl mx-auto">
             Ready to start your transformation? Contact us today and take the
             first step towards peak performance.
           </p>
@@ -116,9 +148,9 @@ export default function Contact() {
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* LEFT: Contact Info */}
-          <div>
-            <div className="bg-black border border-slate-700 rounded-xl p-6">
-              <h3 className="text-2xl font-bold text-[#ef5a24] bg-clip-text mb-6">
+          <div data-aos="fade-right" data-aos-delay="200">
+            <div className="bg-white dark:bg-gray-800 shadow-xl hover:shadow-[#4ab8e9]  z-10 border border-slate-200 dark:border-slate-700 rounded-xl p-6 transition-colors duration-300">
+              <h3 className="text-2xl font-bold text-[#ef5a24] mb-6">
                 Contact Information
               </h3>
 
@@ -130,66 +162,43 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="flex items-start space-x-4"
                 >
-                  <div className="bg-white text-black p-3 rounded-lg shadow-sm ring-1 ring-slate-200/50">
+                  <div className="bg-gray-100 dark:bg-neutral-700 text-black dark:text-white p-3 rounded-lg shadow-sm">
                     <FaMapMarkerAlt size={24} />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-[#ef5a24] bg-clip-text">
+                    <h4 className="text-xl font-bold text-[#ef5a24]">
                       Address
                     </h4>
-                    <p className="text-[#ef5a24] hover:text-[#4ab8e9] whitespace-pre-line">{address}</p>
+                    <p className="text-gray-700 dark:text-gray-300 hover:text-[#4ab8e9] whitespace-pre-line">
+                      {address}
+                    </p>
                   </div>
                 </a>
               </div>
 
               {/* Phone */}
               <div className="flex items-start space-x-4 mb-6">
-                <div className="bg-white text-black p-3 rounded-lg shadow-sm ring-1 ring-slate-200/50">
+                <div className="bg-gray-100 dark:bg-neutral-700 text-black dark:text-white p-3 rounded-lg shadow-sm">
                   <FaPhoneAlt size={24} />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-[#ef5a24] ">
-                    Phone
-                  </h4>
-                  <a href={phoneHref} className="text-[#ef5a24] hover:text-[#4ab8e9] transition">
+                  <h4 className="text-xl font-bold text-[#ef5a24]">Phone</h4>
+                  <a
+                    href={phoneHref}
+                    className="text-[#ef5a24] hover:text-[#4ab8e9] transition"
+                  >
                     {phoneDisplay}
                   </a>
                 </div>
               </div>
 
-              {/* WhatsApp */}
-              {/* <div className="flex items-start space-x-4 mb-6">
-                <div className="bg-white text-black p-3 rounded-lg shadow-sm ring-1 ring-slate-200/50">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true">
-                    <path d="M128 24a104 104 0 0 0-88.61 156.7L32 232l52.15-6.94A104 104 0 1 0 128 24Zm0 192a88 88 0 0 1-45.13-12.46l-3.26-1.94-31.1 4.14 4.22-30.62-2-3.33A88 88 0 1 1 128 216Zm48.9-54.21c-2.69 7.6-13.31 14.27-18.69 14.56-5 .28-11.34.4-32.82-9.72-27.6-13.18-45.51-39.08-46.91-40.94s-11.21-14.95-11.21-28.55 7.1-20.27 9.63-23.08a10.51 10.51 0 0 1 7.67-3.59c1.88 0 3.83 0 5.5.09a9.37 9.37 0 0 1 6.19 2.91c1.93 2.11 6.86 8.41 7.43 9.91s1.87 4.34.27 6.93-2.41 3.86-4.38 6.22c-2 2.35-4.15 4.19-1.78 8s7.69 12.63 16.53 20.45c11.36 10.09 20.92 13.21 24.59 14.7s5.93 1.24 8.13-.75 9.39-10.95 11.89-14.71 4.94-3.05 8.31-1.84 21.56 10.16 25.29 12c3.73 1.84 6.22 2.75 7.14 4.24s.95 7.54-1.74 15.13Z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold bg-gradient-to-r from-[#ef5a24] via-white to-[#ef5a24] bg-clip-text text-transparent">
-                    WhatsApp
-                  </h4>
-                  <a
-                    href={`https://wa.me/441780917600?text=${encodeURIComponent(
-                      `Hello, I need assistance. Here are the details:\n\nName: ${formData.fullName}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nCar Registration: ${formData.carReg}\nMake & Model: ${formData.makeModel}\nLocation: ${formData.location}\nMessage: ${formData.message}`
-                    )}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#ef5a24] hover:text-[#4ab8e9] transition"
-                  >
-                    Message us on WhatsApp
-                  </a>
-                </div>
-              </div> */}
-
               {/* Email */}
-              <div className="flex items-start space-x-4 mb-6">
-                <div className="bg-white text-black p-3 rounded-lg shadow-sm ring-1 ring-slate-200/50">
+              <div className="flex items-start space-x-4">
+                <div className="bg-gray-100 dark:bg-neutral-700 text-black dark:text-white p-3 rounded-lg shadow-sm">
                   <FaEnvelope size={24} />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-[#ef5a24]">
-                    Email
-                  </h4>
+                  <h4 className="text-xl font-bold text-[#ef5a24]">Email</h4>
                   <a
                     href={`https://mail.google.com/mail/?view=cm&fs=1&to=${emailDisplay}&su=Inquiry%20of%20Website`}
                     target="_blank"
@@ -204,8 +213,8 @@ export default function Contact() {
           </div>
 
           {/* RIGHT: Form */}
-          <div>
-            <div className="bg-black border border-slate-700 rounded-xl">
+          <div data-aos="fade-left" data-aos-delay="300">
+            <div className="bg-white dark:bg-gray-800 border hover:shadow-[#4ab8e9]  border-slate-200 dark:border-slate-700 rounded-xl transition-colors duration-300 shadow-xl z-10">
               <div className="p-6 space-y-6">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <InputField
@@ -268,7 +277,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={!!errors.phone || !!errors.email}
-                    className="w-full bg-gradient-to-r from-[#4ab8e9] via-white to-[#ef5a24] text-black hover:opacity-90 text-lg px-6 py-3 rounded-lg font-bold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-gradient-to-r from-[#4ab8e9] via-white to-[#ef5a24] text-black dark:from-[#4ab8e9] dark:via-gray-900 dark:to-[#ef5a24] dark:text-white hover:opacity-90 text-lg px-6 py-3 rounded-lg font-bold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     Send Message Via WhatsApp
                   </button>

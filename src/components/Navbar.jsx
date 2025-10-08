@@ -1,112 +1,116 @@
 import React, { useState } from "react";
-import { FiFacebook, FiTwitter, FiInstagram, FiMenu, FiX, FiChevronDown } from "react-icons/fi";
+import {
+  FiFacebook,
+  FiTwitter,
+  FiInstagram,
+  FiMenu,
+  FiX,
+} from "react-icons/fi";
 import { FaPinterest } from "react-icons/fa";
-import ThemeToggle from "./ThemeToggle";
+import ThemeToggle from "./ThemeToggle"; // Your theme toggle component
 
 const Navbar = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-    return (
-        <nav className="bg-[#1b1b1b] text-white px-6 md:px-12 lg:px-20 shadow-md">
-            <div className="max-w-7xl mx-auto flex items-center justify-between">
+  const navLinks = [
+    { name: "Home", href: "#hero" },
+    { name: "About Us", href: "#about" },
+    { name: "Services", href: "#services" },
+    { name: "Contact", href: "#contact" },
+  ];
 
-                {/* Logo */}
-                <div className="flex items-center gap-3">
-                    <img
-                        src="/logo.png" // 👈 your logo file
-                        alt="Crank Logo"
-                        className="w-50 h-22 object-contain"
-                    />
-                </div>
+  const socialLinks = [
+    { icon: <FiFacebook />, href: "https://facebook.com" },
+    { icon: <FiTwitter />, href: "https://twitter.com" },
+    { icon: <FiInstagram />, href: "https://instagram.com" },
+    { icon: <FaPinterest />, href: "https://pinterest.com" },
+  ];
 
-                {/* Desktop Menu */}
-                <div className="hidden lg:flex items-center gap-8">
-                    {[
-                        { name: "Home", active: true },
-                        { name: "About Us" },
-                        { name: "Services" },
-                        { name: "Contact" },
-                    ].map((item) => (
-                        <button
-                            key={item.name}
-                            className={`flex items-center gap-1 font-semibold text-white hover:text-[#ef5a24]
-                                }`}
-                        >
-                            {item.name}
-                        </button>
-                    ))}
-                </div>
+  return (
+    <nav className="bg-[#1b1b1b] text-white px-6 md:px-12 lg:px-20 shadow-md fixed w-full z-50">
+      <div className="max-w-7xl mx-auto flex items-center justify-between h-18">
+        {/* Logo */}
+        <div className="flex items-center gap-3">
+          <img
+            src="/logo.png" // Replace with your logo
+            alt="Crank Logo"
+            className="w-36 h-12 object-contain"
+          />
+        </div>
 
-                   <div className="md:hidden">
-                            <ThemeToggle />
-                          </div>
-                          <div className="hidden md:block">
-                            <ThemeToggle />
-                          </div>
+        {/* Desktop Menu */}
+        <div className="hidden lg:flex items-center gap-8">
+          {navLinks.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              className="flex items-center gap-1 font-semibold text-white hover:text-[#ef5a24] transition-colors"
+            >
+              {item.name}
+            </a>
+          ))}
+        </div>
 
-                {/* Social Icons */}
-                <div className="hidden lg:flex items-center gap-3">
-                    <div className="flex items-center gap-3">
-                        <a href="#" className="bg-[#2c2c2c] p-2 rounded-full hover:bg-[#ef5a24] transition">
-                            <FiFacebook />
-                        </a>
-                        <a href="#" className="bg-[#2c2c2c] p-2 rounded-full hover:bg-[#ef5a24] transition">
-                            <FiTwitter />
-                        </a>
-                        <a href="#" className="bg-[#2c2c2c] p-2 rounded-full hover:bg-[#ef5a24] transition">
-                            <FiInstagram />
-                        </a>
-                        <a href="#" className="bg-[#2c2c2c] p-2 rounded-full hover:bg-[#ef5a24] transition">
-                            <FaPinterest />
-                        </a>
-                    </div>
-                </div>
+        {/* Desktop Social Icons */}
+        <div className="hidden lg:flex items-center gap-3">
+          {socialLinks.map((item, index) => (
+            <a
+              key={index}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#2c2c2c] p-2 rounded-full hover:bg-[#ef5a24] transition-colors"
+            >
+              {item.icon}
+            </a>
+          ))}
+        </div>
 
-                {/* Mobile Menu Button */}
-                <button
-                    onClick={() => setMenuOpen(!menuOpen)}
-                    className="lg:hidden bg-[#ef5a24] p-2 rounded-full text-xl"
-                >
-                    {menuOpen ? <FiX /> : <FiMenu />}
-                </button>
-            </div>
+        {/* Theme Toggle */}
+        <div className="">
+          <ThemeToggle />
+        </div>
 
-            {/* Mobile Dropdown */}
-            {menuOpen && (
-                <div className="lg:hidden mt-4 bg-[#222] rounded-lg p-4 space-y-3">
-                    {[
-                        "Home",
-                        "About Us",
-                        "Services",
-                        "Contact",
-                    ].map((item) => (
-                        <a
-                            key={item}
-                            href="#"
-                            className="block py-2 text-gray-200 hover:text-[#ef5a24] border-b border-gray-700 last:border-0"
-                        >
-                            {item}
-                        </a>
-                    ))}
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="lg:hidden bg-[#ef5a24] p-2 rounded-full text-xl"
+        >
+          {menuOpen ? <FiX /> : <FiMenu />}
+        </button>
+      </div>
 
-                    <div className="flex gap-3 pt-4">
-                        <a href="#" className="bg-[#2c2c2c] p-2 rounded-full hover:bg-[#ef5a24] transition">
-                            <FiFacebook />
-                        </a>
-                        <a href="#" className="bg-[#2c2c2c] p-2 rounded-full hover:bg-[#ef5a24] transition">
-                            <FiTwitter />
-                        </a>
-                        <a href="#" className="bg-[#2c2c2c] p-2 rounded-full hover:bg-[#ef5a24] transition">
-                            <FiInstagram />
-                        </a>
-                        <a href="#" className="bg-[#2c2c2c] p-2 rounded-full hover:bg-[#ef5a24] transition">
-                            <FaPinterest />
-                        </a>
-                    </div>
-                </div>
-            )}
-        </nav>
-    );
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="lg:hidden mt-4 bg-[#222] rounded-lg p-4 space-y-3">
+          {navLinks.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              onClick={() => setMenuOpen(false)}
+              className="block py-2 text-gray-200 hover:text-[#ef5a24] border-b border-gray-700 last:border-0 transition-colors"
+            >
+              {item.name}
+            </a>
+          ))}
+
+          <div className="flex gap-3 pt-4">
+            {socialLinks.map((item, index) => (
+              <a
+                key={index}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#2c2c2c] p-2 rounded-full hover:bg-[#ef5a24] transition-colors"
+              >
+                {item.icon}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+    </nav>
+  );
 };
 
 export default Navbar;

@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaToolbox } from "react-icons/fa6";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const AboutSection = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true, easing: "ease-in-out" });
+  }, []);
+
   return (
-    <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
+    <section
+      id="about"
+      className="bg-white scroll-m-10 dark:bg-black text-black dark:text-gray-100 py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 transition-colors duration-500"
+    >
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
-        
         {/* LEFT IMAGES */}
-        <div className="relative flex justify-center lg:justify-end order-2 lg:order-1">
-          {/* Background image (moved higher) */}
+        <div
+          className="relative flex justify-center lg:justify-end order-2 lg:order-1"
+          data-aos="fade-right"
+        >
+          {/* Background image */}
           <div
             className="absolute -top-6 sm:-top-8 md:-top-10 left-4 sm:left-6 
                        w-64 sm:w-72 md:w-80 h-[350px] sm:h-[390px] md:h-[430px] 
@@ -18,11 +29,11 @@ const AboutSection = () => {
             <img
               src="image.png"
               alt="Workshop background"
-              className="w-full h-full object-cover opacity-80"
+              className="w-full h-full object-cover opacity-80 dark:opacity-60 transition-opacity duration-500"
             />
           </div>
 
-          {/* Foreground image (moved lower) */}
+          {/* Foreground image */}
           <img
             src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=400&h=500&fit=crop"
             alt="Mechanic"
@@ -32,7 +43,7 @@ const AboutSection = () => {
         </div>
 
         {/* RIGHT CONTENT */}
-        <div className="order-1 lg:order-2">
+        <div className="order-1 lg:order-2" data-aos="fade-left" data-aos-delay="200">
           {/* Subtitle */}
           <div className="flex items-center gap-2 mb-3">
             <FaToolbox className="text-[#ef5a24] text-lg sm:text-xl" />
@@ -42,16 +53,16 @@ const AboutSection = () => {
           </div>
 
           {/* Heading */}
-          <h2 className="text-3xl font-extrabold text-gray-900 mb-3 sm:mb-4 leading-tight sm:leading-snug">
+          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-gray-100 mb-3 sm:mb-4 leading-tight sm:leading-snug">
             WHERE IT ALL STARTED
           </h2>
 
           {/* Description */}
-          <p className="text-gray-600 mb-6 sm:mb-8 md:mb-10 leading-relaxed text-sm sm:text-base">
-            <span className="block font-semibold text-gray-900 mb-2">
+          <p className="text-gray-600 dark:text-gray-300 mb-6 sm:mb-8 md:mb-10 leading-relaxed text-sm sm:text-base">
+            <span className="block font-semibold text-gray-900 dark:text-gray-100 mb-2">
               Delivering Expert Mobile Vehicle Maintenance
             </span>
-            RS Mobile Services was founded by <strong>Sam Ferries</strong> to bring professional car repair 
+            RS Mobile Services was founded by <strong>Sam Ferries</strong> to bring professional car repair
             and servicing directly to customers through a fully equipped mobile setup. 
             The business is now solely owned and operated by Sam, built on trust, skill, and convenience.
           </p>
@@ -59,29 +70,51 @@ const AboutSection = () => {
           {/* Profile + Bullet Points */}
           <div className="flex flex-col gap-6 sm:gap-8">
             {/* Profile Box */}
-            <div className="bg-gray-100 p-4 rounded-lg flex items-center gap-3 sm:gap-4 shadow-sm w-80">
+            <div
+              className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg flex items-center gap-3 sm:gap-4 shadow-sm w-80 transition-colors duration-500"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               <img
                 src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face"
                 alt="Sam Ferries"
                 className="w-14 h-14 rounded-full object-cover flex-shrink-0"
               />
               <div>
-                <h4 className="text-gray-900 font-semibold text-sm sm:text-base">Sam Ferries</h4>
-                <p className="text-gray-500 text-xs sm:text-sm">Founder, RS Mobile Services</p>
+                <h4 className="text-gray-900 dark:text-gray-100 font-semibold text-sm sm:text-base">
+                  Sam Ferries
+                </h4>
+                <p className="text-gray-500 dark:text-gray-400 text-xs sm:text-sm">
+                  Founder, RS Mobile Services
+                </p>
               </div>
             </div>
 
             {/* Bullet List */}
-            <ul className="space-y-3 sm:space-y-4 text-gray-700">
-              <li className="flex items-start gap-2 sm:gap-3">
+            <ul className="space-y-3 sm:space-y-4 text-gray-700 dark:text-gray-300">
+              <li
+                className="flex items-start gap-2 sm:gap-3"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
                 <IoMdCheckmarkCircleOutline className="text-[#ef5a24] flex-shrink-0 mt-1 text-lg" />
                 <span className="text-sm sm:text-base">Our experience is proven</span>
               </li>
-              <li className="flex items-start gap-2 sm:gap-3">
+              <li
+                className="flex items-start gap-2 sm:gap-3"
+                data-aos="fade-up"
+                data-aos-delay="500"
+              >
                 <IoMdCheckmarkCircleOutline className="text-[#ef5a24] flex-shrink-0 mt-1 text-lg" />
-                <span className="text-sm sm:text-base">Qualified, reliable, and service-driven</span>
+                <span className="text-sm sm:text-base">
+                  Qualified, reliable, and service-driven
+                </span>
               </li>
-              <li className="flex items-start gap-2 sm:gap-3">
+              <li
+                className="flex items-start gap-2 sm:gap-3"
+                data-aos="fade-up"
+                data-aos-delay="600"
+              >
                 <IoMdCheckmarkCircleOutline className="text-[#ef5a24] flex-shrink-0 mt-1 text-lg" />
                 <span className="text-sm sm:text-base">
                   Decades of expertise across top automotive brands
