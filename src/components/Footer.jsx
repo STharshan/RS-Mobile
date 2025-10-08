@@ -24,39 +24,13 @@ export default function Footer() {
                         <div className="flex space-x-4">
                             {/* Facebook */}
                             <a
-                                //href="https://www.facebook.com/share/16eb5kcuGU/?mibextid=wwXIfr"
+                                href="https://www.facebook.com/people/RS-Mobile-Services/100092690151352/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Facebook"
                             >
                                 <FaFacebookF
                                     className="text-gray-400 hover:text-blue-600 cursor-pointer transition-colors"
-                                    size={20}
-                                />
-                            </a>
-
-                            {/* Instagram */}
-                            <a
-                                //href="https://www.instagram.com/afmokperformance/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="Instagram"
-                            >
-                                <FaInstagram
-                                    className="text-gray-400 hover:text-pink-600 cursor-pointer transition-colors"
-                                    size={20}
-                                />
-                            </a>
-
-                            {/* TikTok */}
-                            <a
-                                //href="https://www.tiktok.com/@afmok.performance"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="TikTok"
-                            >
-                                <FaTiktok
-                                    className="text-gray-400 hover:text-gray-600 cursor-pointer transition-colors"
                                     size={20}
                                 />
                             </a>

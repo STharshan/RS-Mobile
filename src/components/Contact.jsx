@@ -129,13 +129,13 @@ export default function Contact() {
     <section
       id="contact"
       data-aos="fade-up"
-      className="py-20 bg-white dark:bg-black transition-colors duration-300"
+      className="py-10 bg-white dark:bg-black transition-colors duration-300"
     >
-      <div className="container mx-auto px-4 md:px-12">
+      <div className="container mx-auto px-4 md:px-12 -mt-8">
         {/* Heading */}
         <div className="text-center mb-16" data-aos="fade-up" data-aos-delay="100">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <p className="text-[#ef5a24] font-semibold uppercase tracking-wide text-lg">
+            <p className="text-[#ef5a24] dark:text-[#4ab8e9] font-semibold uppercase tracking-wide text-lg">
               GET IN TOUCH
             </p>
           </h2>
@@ -148,7 +148,7 @@ export default function Contact() {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* LEFT: Contact Info */}
           <div data-aos="fade-right" data-aos-delay="200">
-            <div className="bg-white dark:bg-gray-800 shadow-xl hover:shadow-[#4ab8e9]  z-10 border border-slate-200 dark:border-slate-700 rounded-xl p-6 transition-colors duration-300">
+            <div className="bg-white dark:bg-gray-800 shadow-xl hover:shadow-[#4ab8e9] active:shadow-[#4ab8e9] dark:hover:shadow-[#ef5a24] dark:active:shadow-[#ef5a24]  z-10 border border-slate-200 dark:border-slate-700 rounded-xl p-6 transition-colors duration-300">
               <h3 className="text-2xl font-bold text-[#ef5a24] mb-6">
                 Contact Information
               </h3>
@@ -213,7 +213,7 @@ export default function Contact() {
 
           {/* RIGHT: Form */}
           <div data-aos="fade-left" data-aos-delay="300">
-            <div className="bg-white dark:bg-gray-800 border hover:shadow-[#4ab8e9]  border-slate-200 dark:border-slate-700 rounded-xl transition-colors duration-300 shadow-xl z-10">
+            <div className="bg-white dark:bg-gray-800 border hover:shadow-[#4ab8e9] active:shadow-[#4ab8e9] dark:hover:shadow-[#ef5a24] dark:active:shadow-[#ef5a24] border-slate-200 dark:border-slate-700 rounded-xl transition-colors duration-300 shadow-xl z-10">
               <div className="p-6 space-y-6">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <InputField

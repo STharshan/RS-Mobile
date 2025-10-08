@@ -42,10 +42,10 @@ const ServiceSection = () => {
   }, []);
 
   return (
-    <section className="py-20 px-6 bg-white dark:bg-black text-black dark:text-gray-100 transition-colors duration-300">
+    <section className="py-10 px-6 bg-white dark:bg-black text-black dark:text-gray-100 transition-colors duration-300">
       {/* Section Title */}
       <div className="text-center mb-16">
-        <p className="text-[#ef5a24] font-semibold uppercase tracking-wide text-lg">
+        <p className="text-[#ef5a24]  dark:text-[#4ab8e9] font-semibold uppercase tracking-wide text-lg">
           Easy Drive Maintenance
         </p>
         <h2 className="text-4xl font-extrabold text-gray-900 max-w-xl mx-auto dark:text-gray-100 mb-3 sm:mb-4 leading-tight sm:leading-snug">
@@ -60,7 +60,7 @@ const ServiceSection = () => {
             key={service.id}
             data-aos="fade-up"
             data-aos-delay={index * 100}
-            className="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6 text-center transition-colors duration-300 hover:shadow-[#4ab8e9] "
+            className="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6 text-center transition-colors duration-300 hover:shadow-[#4ab8e9] active:shadow-[#4ab8e9] dark:hover:shadow-[#ef5a24] dark:active:shadow-[#ef5a24]"
           >
             {service.icon}
             <h3 className="text-2xl font-semibold mb-2">{service.title}</h3>

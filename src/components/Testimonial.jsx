@@ -91,11 +91,11 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-22 bg-white dark:bg-black transition-colors duration-500 relative">
+    <section className="py-12 bg-white dark:bg-black transition-colors duration-500 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="text-[#ef5a24] font-semibold tracking-widest uppercase text-lg">
+          <p className="text-[#ef5a24] dark:text-[#4ab8e9] font-semibold tracking-widest uppercase text-lg">
             Our Testimonials
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mt-2">
@@ -121,14 +121,14 @@ export default function Testimonials() {
         {/* Scroll Container */}
         <div
           ref={scrollRef}
-          className="flex space-x-6  overflow-x-auto  scroll-smooth snap-x snap-mandatory px-2 py-20 hide-scrollbar"
+          className="flex space-x-6  overflow-x-auto  scroll-smooth snap-x snap-mandatory px-2 py-8 hide-scrollbar"
         >
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
               data-aos="fade-up"           // Added AOS animation
               data-aos-delay={index * 100} // Optional stagger effect
-              className="flex-shrink-0 w-72 sm:w-80 md:w-96 bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-[#4ab8e9] relative snap-start"
+              className="flex-shrink-0 w-72 sm:w-80 md:w-96 bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-[#4ab8e9] active:shadow-[#4ab8e9] dark:hover:shadow-[#ef5a24] dark:active:shadow-[#ef5a24] relative snap-start"
             >
               {/* Red Corner Triangle */}
               <div className="absolute top-0 left-0 w-0 h-0 border-t-[80px] border-t-[#ef5a24] border-r-[80px] border-r-transparent"></div>

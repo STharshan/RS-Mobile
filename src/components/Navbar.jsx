@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import {
   FiFacebook,
-  FiTwitter,
-  FiInstagram,
   FiMenu,
   FiX,
 } from "react-icons/fi";
-import { FaPinterest } from "react-icons/fa";
 import ThemeToggle from "./ThemeToggle"; // Your theme toggle component
 
 const Navbar = () => {

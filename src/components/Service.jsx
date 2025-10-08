@@ -70,7 +70,7 @@ const ServiceCard = ({ service, onClick, aosDelay }) => {
       data-aos-delay={aosDelay}
       className={`${
         service.bgColor || 'bg-white dark:bg-gray-800'
-      } p-6 md:p-8 rounded-lg shadow-sm hover:shadow-md transition-all cursor-pointer transform hover:-translate-y-1 hover:shadow-[#4ab8e9] `}
+      } p-6 md:p-8 rounded-lg shadow-sm hover:shadow-md transition-all cursor-pointer transform hover:-translate-y-1 hover:shadow-[#4ab8e9] active:shadow-[#4ab8e9] dark:hover:shadow-[#ef5a24] dark:active:shadow-[#ef5a24]`}
       onClick={onClick}
     >
       <div className="mb-4">
@@ -222,7 +222,7 @@ export default function CarServicesSection() {
         <div className="max-w-6xl mx-auto relative z-10">
           {/* Header */}
           <div className="text-center mb-10">
-            <p className="dark:text-gray-300 text-[#ef5a24] text-lg font-semibold tracking-wider mb-2">
+            <p className="dark:text-[#4ab8e9] text-[#ef5a24]  text-lg font-semibold tracking-wider mb-2">
               OUR SERVICES
             </p>
             <h2 className="text-gray-900 dark:text-white text-2xl md:text-4xl lg:text-5xl font-bold">

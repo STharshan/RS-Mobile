@@ -14,7 +14,7 @@ const AboutSection = () => {
       id="about"
       className="bg-white scroll-m-10 dark:bg-black text-black dark:text-gray-100 py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 transition-colors duration-500"
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center mt-10">
         {/* LEFT IMAGES */}
         <div
           className="relative flex justify-center lg:justify-end order-2 lg:order-1"
@@ -46,8 +46,8 @@ const AboutSection = () => {
         <div className="order-1 lg:order-2" data-aos="fade-left" data-aos-delay="200">
           {/* Subtitle */}
           <div className="flex items-center gap-2 mb-3">
-            <FaToolbox className="text-[#ef5a24] text-lg sm:text-xl" />
-            <p className="text-[#ef5a24] font-semibold text-lg uppercase tracking-wide sm:text-sm">
+            <FaToolbox className="text-[#ef5a24] dark:text-[#4ab8e9]  text-lg sm:text-xl" />
+            <p className="text-[#ef5a24] dark:text-[#4ab8e9]  font-semibold text-lg uppercase tracking-wide sm:text-sm">
               Who We Are
             </p>
           </div>
@@ -97,7 +97,7 @@ const AboutSection = () => {
                 data-aos="fade-up"
                 data-aos-delay="400"
               >
-                <IoMdCheckmarkCircleOutline className="text-[#ef5a24] flex-shrink-0 mt-1 text-lg" />
+                <IoMdCheckmarkCircleOutline className="text-[#ef5a24] dark:text-[#4ab8e9] flex-shrink-0 mt-1 text-lg" />
                 <span className="text-sm sm:text-base">Our experience is proven</span>
               </li>
               <li
@@ -105,7 +105,7 @@ const AboutSection = () => {
                 data-aos="fade-up"
                 data-aos-delay="500"
               >
-                <IoMdCheckmarkCircleOutline className="text-[#ef5a24] flex-shrink-0 mt-1 text-lg" />
+                <IoMdCheckmarkCircleOutline className="text-[#ef5a24] dark:text-[#4ab8e9] flex-shrink-0 mt-1 text-lg" />
                 <span className="text-sm sm:text-base">
                   Qualified, reliable, and service-driven
                 </span>
@@ -115,7 +115,7 @@ const AboutSection = () => {
                 data-aos="fade-up"
                 data-aos-delay="600"
               >
-                <IoMdCheckmarkCircleOutline className="text-[#ef5a24] flex-shrink-0 mt-1 text-lg" />
+                <IoMdCheckmarkCircleOutline className="text-[#ef5a24] dark:text-[#4ab8e9] flex-shrink-0 mt-1 text-lg" />
                 <span className="text-sm sm:text-base">
                   Decades of expertise across top automotive brands
                 </span>
