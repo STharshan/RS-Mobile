@@ -135,15 +135,14 @@ export default function Contact() {
         {/* Heading */}
         <div className="text-center mb-16" data-aos="fade-up" data-aos-delay="100">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-black dark:text-white">GET IN </span>
-            <span className="bg-gradient-to-r from-[#4ab8e9] to-[#ef5a24] bg-clip-text text-transparent">
-              TOUCH
-            </span>
+            <p className="text-[#ef5a24] font-semibold uppercase tracking-wide text-lg">
+              GET IN TOUCH
+            </p>
           </h2>
-          <p className="text-xl text-gray-800 dark:text-gray-300 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-gray-100 mb-3 max-w-3xl mx-auto sm:mb-4 leading-tight sm:leading-snug">
             Ready to start your transformation? Contact us today and take the
             first step towards peak performance.
-          </p>
+          </h2>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -169,7 +168,7 @@ export default function Contact() {
                     <h4 className="text-xl font-bold text-[#ef5a24]">
                       Address
                     </h4>
-                    <p className="text-gray-700 dark:text-gray-300 hover:text-[#4ab8e9] whitespace-pre-line">
+                    <p className="text-[#ef5a24] dark:text-gray-300 hover:text-[#4ab8e9] whitespace-pre-line">
                       {address}
                     </p>
                   </div>

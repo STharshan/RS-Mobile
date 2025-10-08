@@ -45,12 +45,12 @@ const ServiceSection = () => {
     <section className="py-20 px-6 bg-white dark:bg-black text-black dark:text-gray-100 transition-colors duration-300">
       {/* Section Title */}
       <div className="text-center mb-16">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-gray-100">
-          Latest Service
-        </h2>
-        <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mt-4">
-          Easy Drive Maintenance — Your Mobile Garage Bringing the Workshop to You
+        <p className="text-[#ef5a24] font-semibold uppercase tracking-wide text-lg">
+          Easy Drive Maintenance
         </p>
+        <h2 className="text-4xl font-extrabold text-gray-900 max-w-xl mx-auto dark:text-gray-100 mb-3 sm:mb-4 leading-tight sm:leading-snug">
+          Your Mobile Garage Bringing the Workshop to You
+        </h2>
       </div>
 
       {/* Service Cards */}

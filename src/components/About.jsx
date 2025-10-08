@@ -47,7 +47,7 @@ const AboutSection = () => {
           {/* Subtitle */}
           <div className="flex items-center gap-2 mb-3">
             <FaToolbox className="text-[#ef5a24] text-lg sm:text-xl" />
-            <p className="text-[#ef5a24] font-semibold uppercase tracking-wide text-xs sm:text-sm">
+            <p className="text-[#ef5a24] font-semibold text-lg uppercase tracking-wide sm:text-sm">
               Who We Are
             </p>
           </div>
@@ -76,9 +76,9 @@ const AboutSection = () => {
               data-aos-delay="300"
             >
               <img
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face"
+                src="test.png"
                 alt="Sam Ferries"
-                className="w-14 h-14 rounded-full object-cover flex-shrink-0"
+                className="w-18 h-10  object-cover flex-shrink-0"
               />
               <div>
                 <h4 className="text-gray-900 dark:text-gray-100 font-semibold text-sm sm:text-base">

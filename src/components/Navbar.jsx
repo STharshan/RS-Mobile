@@ -20,10 +20,7 @@ const Navbar = () => {
   ];
 
   const socialLinks = [
-    { icon: <FiFacebook />, href: "https://facebook.com" },
-    { icon: <FiTwitter />, href: "https://twitter.com" },
-    { icon: <FiInstagram />, href: "https://instagram.com" },
-    { icon: <FaPinterest />, href: "https://pinterest.com" },
+    { icon: <FiFacebook />, href: "https://www.facebook.com/people/RS-Mobile-Services/100092690151352/" },
   ];
 
   return (

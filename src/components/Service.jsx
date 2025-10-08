@@ -222,10 +222,10 @@ export default function CarServicesSection() {
         <div className="max-w-6xl mx-auto relative z-10">
           {/* Header */}
           <div className="text-center mb-10">
-            <p className="text-gray-700 dark:text-gray-300 text-lg font-semibold tracking-wider mb-2">
+            <p className="dark:text-gray-300 text-[#ef5a24] text-lg font-semibold tracking-wider mb-2">
               OUR SERVICES
             </p>
-            <h2 className="text-gray-900 dark:text-white text-3xl md:text-5xl lg:text-6xl font-bold">
+            <h2 className="text-gray-900 dark:text-white text-2xl md:text-4xl lg:text-5xl font-bold">
               WE PROVIDE BEST SERVICES
             </h2>
           </div>

@@ -28,12 +28,14 @@ const HeroSection = () => {
                         </p>
 
                         <div className="flex items-center gap-5 pt-4">
-                            <button className="border-2 border-[#4ab8e9] text-white px-6 py-3 rounded-full flex items-center gap-2 group hover:bg-[#4ab8e9] transition font-semibold">
-                                <span className="transition-transform duration-300 group-hover:-translate-x-1">
-                                    Get Started
-                                </span>
-                                <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
-                            </button>
+                            <a href="/#contact">
+                                <button className="border-2 border-[#4ab8e9] text-white px-6 py-3 rounded-full flex items-center gap-2 group hover:bg-[#4ab8e9] transition font-semibold">
+                                    <span className="transition-transform duration-300 group-hover:-translate-x-1">
+                                        Get Started
+                                    </span>
+                                    <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+                                </button>
+                            </a>
 
                             <button className="w-14 h-14 rounded-full border-2 border-gray-500 flex items-center justify-center hover:border-[#4ab8e9] transition">
                                 <FiPlay className="text-2xl" />
@@ -53,8 +55,8 @@ const HeroSection = () => {
             </section>
 
             {/* Stats Section */}
-            <section className="bg-white text-black shadow-lg py-10 -mt-12 justify-center w-[70%] px-6 md:px-12 lg:px-20 rounded-2xl max-w-5xl mx-auto translate-x-0 z-10">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-10 max-w-7xl items-center">
+            <section className="bg-white text-black shadow-lg py-10 -mt-12 justify-center w-[80%] px-6 md:px-12 lg:px-20 rounded-2xl max-w-5xl mx-auto translate-x-0 z-10">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl items-center">
                     <div className="text-center" data-aos="fade-up">
                         <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold">600+</h3>
                         <p className="text-gray-800">Team Member</p>
