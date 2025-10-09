@@ -103,10 +103,10 @@ export default function Contact() {
     e.preventDefault();
     if (errors.phone || errors.email) return;
 
-    const waMessage = `Hello, I need assistance. Here are the details:\n\nName: ${formData.fullName}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nCar Registration: ${formData.carReg}\nMake & Model: ${formData.makeModel}\nLocation: ${formData.location}\nMessage: ${formData.message}`;
+    const waMessage = `Hello, \n\nName: ${formData.fullName}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nCar Registration: ${formData.carReg}\nMake & Model: ${formData.makeModel}\nLocation: ${formData.location}\nMessage: ${formData.message}`;
 
     // ✅ Updated WhatsApp number here
-    const waHref = `https://wa.me/447506126071?text=${encodeURIComponent(
+    const waHref = `https://wa.me/447300881440?text=${encodeURIComponent(
       waMessage
     )}`;
 

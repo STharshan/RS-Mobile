@@ -47,7 +47,7 @@ export default function GDPRConsent() {
           </p>
           <p className="mb-3">
             <a
-              href="/privacy-policy"
+              href="/privacy"
               className="underline text-[#4ab8e9] hover:text-[#ef5a24] dark:text-[#4ab8e9] dark:hover:text-[#007BC2]"
             >
               See our Privacy Policy
