@@ -56,20 +56,20 @@ const HeroSection = () => {
             <section className="bg-white text-black shadow-lg py-10 -mt-12 justify-center w-[80%] px-6 md:px-12 lg:px-20 rounded-2xl max-w-5xl mx-auto translate-x-0 z-10">
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl items-center">
                     <div className="text-center" data-aos="fade-up">
-                        <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold">3+</h3>
-                        <p className="text-gray-800">Cities covered</p>
+                        <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#ef5a24]">3+</h3>
+                        <p className="text-[#ef5a24]">Cities covered</p>
                     </div>
                     <div className="text-center" data-aos="fade-up" data-aos-delay="100">
-                        <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold">1000+</h3>
-                        <p className="text-gray-800">Cars helped</p>
+                        <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#ef5a24]">1000+</h3>
+                        <p className="text-[#ef5a24] ">Cars helped</p>
                     </div>
                     <div className="text-center" data-aos="fade-up" data-aos-delay="200">
-                        <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold">40+</h3>
-                        <p className="text-gray-800">Mile radius</p>
+                        <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#ef5a24]">40+</h3>
+                        <p className="text-[#ef5a24]">Mile radius</p>
                     </div>
                     <div className="text-center" data-aos="fade-up" data-aos-delay="300">
-                        <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold">5+</h3>
-                        <p className="text-gray-800">Counties covered</p>
+                        <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#ef5a24]">5+</h3>
+                        <p className="text-[#ef5a24]">Counties covered</p>
                     </div>
                 </div>
             </section>

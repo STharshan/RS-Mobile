@@ -31,7 +31,7 @@ const services = [
     id: 4,
     title: 'Smart Payment Plans',
     description: 'I Don’t Have the Funds Now — Can I Still Benefit?',
-    desc: "Yes. Choose a one-off payment or spread costs with our flexible service plans. We’re the first in the UK to offer an MOT Plan with a Guaranteed Pass.",
+    desc: "Yes. Choose a one-off payment or spread costs with our flexible service plans.",
     icon: <MdOutlinePayment className="w-20 h-20 mx-auto mb-4 text-[#ef5a24]" />,
   },
 ];

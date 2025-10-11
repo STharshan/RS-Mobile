@@ -69,11 +69,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors duration-300"
                 >
-                  10 Campion Grove,
-                  <br />
-                  Stamford PE9 4BY,
-                  <br />
-                  United Kingdom
+                  40 Mile Radius From Stamford
                 </a>
               </li>
 

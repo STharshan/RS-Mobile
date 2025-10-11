@@ -127,7 +127,7 @@ export default function Contact() {
   const phoneDisplay = "+44 1780 917600";
   const phoneHref = "tel:+44 1780 917600";
   const emailDisplay = "sam.ferries@rsmobileservices.co.uk";
-  const address = `10 Campion Grove, Stamford PE9 4BY, United Kingdom`;
+  const address = `40 Mile Radius From Stamford`;
 
   return (
     <section

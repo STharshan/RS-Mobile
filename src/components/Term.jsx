@@ -80,7 +80,7 @@ const TermsConditions = () => {
                           <p><strong>RS Mobile Services</strong></p>
                           <p>Email: <a href="mailto:sam.ferries@rsmobileservices.co.uk" className="text-[#4ab8e9] hover:underline">sam.ferries@rsmobileservices.co.uk</a></p>
                           <p>Phone: +44 1780 917600</p>
-                          <p>Address: 10 Campion Grove, Stamford PE9 4BY, United Kingdom</p>
+                          <p>Address: 40 Mile Radius From Stamford</p>
                       </div>
                   </section>
               </div>
