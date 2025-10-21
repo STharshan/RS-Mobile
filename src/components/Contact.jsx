@@ -222,7 +222,7 @@ export default function Contact() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <InputField
                     name="fullName"
-                    placeholder="Full Name"
+                    placeholder="Full Name*"
                     value={formData.fullName}
                     onChange={handleChange}
                     required
@@ -230,7 +230,7 @@ export default function Contact() {
                   <InputField
                     name="email"
                     type="email"
-                    placeholder="your.email@example.com"
+                    placeholder="Enter your Email*"
                     value={formData.email}
                     onChange={handleChange}
                     error={errors.email}
@@ -239,7 +239,7 @@ export default function Contact() {
                   <InputField
                     name="phone"
                     type="tel"
-                    placeholder="+44 7123 456789 or 07123456789"
+                    placeholder="Enter Your Phone Number*"
                     value={formData.phone}
                     onChange={handleChange}
                     error={errors.phone}
@@ -249,19 +249,19 @@ export default function Contact() {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <InputField
                       name="carReg"
-                      placeholder="Car Registration"
+                      placeholder="Car Registration*"
                       value={formData.carReg}
                       onChange={handleChange}
                     />
                     <InputField
                       name="makeModel"
-                      placeholder="Make and Model"
+                      placeholder="Make and Model*"
                       value={formData.makeModel}
                       onChange={handleChange}
                     />
                     <InputField
                       name="location"
-                      placeholder="Location"
+                      placeholder="Location*"
                       value={formData.location}
                       onChange={handleChange}
                     />
@@ -269,7 +269,7 @@ export default function Contact() {
 
                   <InputField
                     name="message"
-                    placeholder="Tell us about your car issue"
+                    placeholder="Tell us about your car issue*"
                     value={formData.message}
                     onChange={handleChange}
                     textarea

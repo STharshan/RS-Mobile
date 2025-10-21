@@ -11,7 +11,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", href: "/#hero" },
+    { name: "Home", href: "/#" },
     { name: "About Us", href: "/#about" },
     { name: "Services", href: "/#services" },
     { name: "Contact", href: "/#contact" },
