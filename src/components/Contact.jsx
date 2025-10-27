@@ -124,10 +124,10 @@ export default function Contact() {
   };
 
 
-  const phoneDisplay = "+44 1780 917600";
-  const phoneHref = "tel:+44 1780 917600";
-  const emailDisplay = "sam.ferries@rsmobileservices.co.uk";
-  const address = `40 Mile Radius From Stamford`;
+  const phoneDisplay = import.meta.env.VITE_PHONE_DISPLAY;
+  const phoneHref = import.meta.env.VITE_PHONE_HREF;
+  const emailDisplay = import.meta.env.VITE_EMAIL_DISPLAY;
+  const address = import.meta.env.VITE_ADDRESS;
 
   return (
     <section
