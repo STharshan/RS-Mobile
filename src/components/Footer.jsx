@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3">
-              <span className="text-2xl font-bold bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-linear-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent">
                 RS <span className="text-gray-400">Mobile Services</span>
               </span>
             </div>
@@ -34,7 +34,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-bold mb-4 bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent">
+            <h3 className="font-bold mb-4 bg-linear-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent">
               Services
             </h3>
             <ul className="space-y-2 text-gray-400">
@@ -57,7 +57,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-bold mb-4 bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent">
+            <h3 className="font-bold mb-4 bg-linear-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent">
               Contact Info
             </h3>
             <ul className="space-y-4 text-gray-400">

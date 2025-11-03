@@ -280,7 +280,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={!!errors.phone || !!errors.email}
-                    className="w-full bg-gradient-to-r from-[#4ab8e9] via-white to-[#ef5a24] text-black dark:from-[#4ab8e9] dark:via-gray-900 dark:to-[#ef5a24] dark:text-white hover:opacity-90 text-lg px-6 py-3 rounded-lg font-bold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-linear-to-r from-[#4ab8e9] via-white to-[#ef5a24] text-black dark:from-[#4ab8e9] dark:via-gray-900 dark:to-[#ef5a24] dark:text-white hover:opacity-90 text-lg px-6 py-3 rounded-lg font-bold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     Send Message Via WhatsApp
                   </button>
