@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -68,6 +68,7 @@ Definitely recommend them`,
   },
 ];
 
+
 export default function Testimonials() {
   const scrollRef = useRef(null);
 
@@ -77,6 +78,23 @@ export default function Testimonials() {
       once: true,
       offset: 100,
     });
+
+    // ✅ Center the first card after mount
+    const timeout = setTimeout(() => {
+      const container = scrollRef.current;
+      if (container && container.children.length > 0) {
+        const firstCard = container.children[0];
+        const scrollPosition =
+          firstCard.offsetLeft -
+          (container.offsetWidth / 2 - firstCard.offsetWidth / 2);
+        container.scrollTo({
+          left: scrollPosition,
+          behavior: "smooth",
+        });
+      }
+    }, 300); // small delay ensures layout is ready
+
+    return () => clearTimeout(timeout);
   }, []);
 
   const scroll = (direction) => {
@@ -121,16 +139,24 @@ export default function Testimonials() {
         {/* Scroll Container */}
         <div
           ref={scrollRef}
-          className="flex space-x-6  overflow-x-auto  scroll-smooth snap-x snap-mandatory px-2 py-8 hide-scrollbar"
+          className="flex space-x-6 translate-x-6 md:translate-x-0 overflow-x-auto scroll-smooth snap-x snap-mandatory px-2 py-8 hide-scrollbar"
         >
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              data-aos="fade-up"           // Added AOS animation
-              data-aos-delay={index * 100} // Optional stagger effect
-              className="flex-shrink-0 w-72 sm:w-80 md:w-96 bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-[#4ab8e9] active:shadow-[#4ab8e9] dark:hover:shadow-[#ef5a24] dark:active:shadow-[#ef5a24] relative snap-start"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+              className="
+                flex-shrink-0
+                w-[94%] sm:w-80 md:w-85 lg:w-96
+                bg-white dark:bg-gray-800 
+                rounded-2xl shadow-lg overflow-hidden 
+                hover:shadow-[#4ab8e9] active:shadow-[#4ab8e9] 
+                dark:hover:shadow-[#ef5a24] dark:active:shadow-[#ef5a24] 
+                relative snap-start
+              "
             >
-              {/* Red Corner Triangle */}
+              {/* Corner Triangle */}
               <div className="absolute top-0 left-0 w-0 h-0 border-t-[80px] border-t-[#ef5a24] border-r-[80px] border-r-transparent"></div>
 
               {/* Profile Section */}
@@ -151,7 +177,7 @@ export default function Testimonials() {
                       {testimonial.name}
                     </h3>
                     <p className="text-gray-600 dark:text-gray-300 text-sm">
-                      Client
+                      {testimonial.role}
                     </p>
                   </div>
                 </div>
@@ -159,9 +185,7 @@ export default function Testimonials() {
                 {/* Stars */}
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-yellow-400 text-lg">
-                      ★
-                    </span>
+                    <span key={i} className="text-yellow-400 text-lg">★</span>
                   ))}
                 </div>
 
